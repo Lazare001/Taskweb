@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>{% block title %}Tasky — AI ციფრული თანამშრომელი{% endblock %}</title>
+<meta name="description" content="{% block meta_desc %}Tasky ეხმარება ქართულ მცირე და საშუალო ბიზნესებს მარკეტინგის, გაყიდვების, ხარჯებისა და ანალიტიკის ავტომატიზაციაში.{% endblock %}">
+<meta property="og:title" content="Tasky — AI ციფრული თანამშრომელი ქართული ბიზნესებისთვის">
+<meta property="og:description" content="მიეცი დავალება ტასკის და დაზოგე დრო.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'core/style.css' %}">
+<link rel="stylesheet" href="{% static 'core/pages.css' %}">
+</head>
+<body>
+
+<!-- FLOATING ISLAND NAV -->
+<div class="nav-island-wrap">
+  <nav class="nav-island" id="nav-island">
+    <a href="{% url 'index' %}" class="nav-logo" aria-label="Tasky Home">
+      <img src="{% static 'core/images/logo.svg' %}" alt="Tasky Logo" class="logo-img">
+      <span class="logo-text">Tasky<span class="logo-ai">AI</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="{% url 'problem' %}" class="nav-link {% if request.resolver_match.url_name == 'problem' %}active{% endif %}">პრობლემა</a>
+      <a href="{% url 'solution' %}" class="nav-link {% if request.resolver_match.url_name == 'solution' %}active{% endif %}">გადაწყვეტა</a>
+      <a href="{% url 'features' %}" class="nav-link {% if request.resolver_match.url_name == 'features' %}active{% endif %}">ფუნქციები</a>
+      <a href="{% url 'pricing' %}" class="nav-link {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">ფასები</a>
+      <a href="{% url 'faq' %}" class="nav-link {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a>
+    </div>
+    <a href="{% url 'beta' %}" class="btn-island {% if request.resolver_match.url_name == 'beta' %}active{% endif %}">Beta →</a>
+    <button class="burger" id="burger" aria-label="მენიუ">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <rect y="3" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect y="9" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect y="15" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+  </nav>
+</div>
+
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-overlay" id="mobile-overlay">
+  <div class="mobile-menu">
+    <a href="{% url 'index' %}" class="mobile-link">მთავარი</a>
+    <a href="{% url 'problem' %}" class="mobile-link">პრობლემა</a>
+    <a href="{% url 'solution' %}" class="mobile-link">გადაწყვეტა</a>
+    <a href="{% url 'features' %}" class="mobile-link">ფუნქციები</a>
+    <a href="{% url 'pricing' %}" class="mobile-link">ფასები</a>
+    <a href="{% url 'faq' %}" class="mobile-link">FAQ</a>
+    <a href="{% url 'beta' %}" class="mobile-link mobile-cta">Beta ტესტირება →</a>
+  </div>
+</div>
+
+<main>
+{% block content %}{% endblock %}
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-glow"></div>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="{% static 'core/images/logo.svg' %}" alt="Tasky" class="logo-img">
+          <span class="logo-text">Tasky<span class="logo-ai">AI</span></span>
+        </div>
+        <p>AI ციფრული თანამშრომელი ქართული ბიზნესებისთვის. მარკეტინგი, გაყიდვები, ხარჯები — ავტომატიზებული.</p>
+      </div>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h4>პლატფორმა</h4>
+          <a href="{% url 'solution' %}">გადაწყვეტა</a>
+          <a href="{% url 'features' %}">ფუნქციები</a>
+          <a href="{% url 'pricing' %}">ფასები</a>
+        </div>
+        <div class="footer-col">
+          <h4>კომპანია</h4>
+          <a href="{% url 'problem' %}">პრობლემა</a>
+          <a href="{% url 'faq' %}">FAQ</a>
+          <a href="{% url 'beta' %}">Beta</a>
+        </div>
+      </div>
+      <div class="footer-cta-box">
+        <p>მზად ხარ დაიწყო?</p>
+        <a href="{% url 'beta' %}" class="btn btn-primary">Beta-ში შესვლა</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Tasky AI. ყველა უფლება დაცულია.</p>
+      <p>შექმნილია ქართული ბიზნესებისთვის.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="{% static 'core/main.js' %}"></script>
+{% block extra_js %}{% endblock %}
+</body>
+</html>

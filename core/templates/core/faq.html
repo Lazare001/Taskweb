@@ -1,0 +1,104 @@
+{% extends 'core/base.html' %}
+{% block title %}FAQ — Tasky AI{% endblock %}
+{% block content %}
+<section class="inner-hero">
+  <div class="hero-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+  <div class="container">
+    <div class="inner-hero-content reveal">
+      <div class="section-tag">კითხვები</div>
+      <h1>ხშირად დასმული <span class="hero-grad">კითხვები</span></h1>
+      <p>ვერ იპოვე პასუხი? <a href="{% url 'beta' %}" style="color:var(--blue);">დაგვიკავშირდი →</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width:800px">
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>რა არის Tasky?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>Tasky არის AI-ზე დაფუძნებული ციფრული თანამშრომელი, რომელიც ეხმარება ქართულ მცირე და საშუალო ბიზნესებს მარკეტინგის ავტომატიზაციაში, გაყიდვების გაზრდაში, ხარჯების კონტროლსა და ბიზნეს ანალიტიკაში — ერთ პლატფორმაზე, ქართულ ენაზე.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>ქართულად მუშაობს?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>დიახ, სრულად! Tasky შექმნილია ქართული ბაზრისთვის. ყველა კონტენტი, ჩატბოტი, ანგარიში და ინტერფეისი ქართულადაა. AI ესმის ქართული ბიზნეს კულტურის კონტექსტი.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>მჭირდება ტექნიკური ცოდნა?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>არა. Tasky შექმნილია ისე, რომ ნებისმიერ ბიზნესის მფლობელს მარტივად შეეძლოს გამოყენება ტექნიკური ცოდნის გარეშე. Setup პროცესს ჩვენი გუნდი პირადად დაეხმარება Beta-ს ფარგლებში.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>Facebook/Instagram-თან მუშაობს?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>დიახ. Tasky ინტეგრირდება Facebook-სა და Instagram-ს, მართავს კომენტარებს, შეტყობინებებს, ქმნის და პუბლიკაციას ახდენს კონტენტს, და ახდენს კამპანიების ოპტიმიზაციას.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>რა ღირს?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>გეგმები $18.99-დან იწყება. Beta მონაწილეები პირველ 3 თვეს 50% ფასდაკლებით იყენებენ. სრული ფასები იხილეთ <a href="{% url 'pricing' %}" style="color:var(--blue);">ფასების გვერდზე →</a></p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>ვის შეეფერება?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>კაფეებს, რესტორნებს, ონლაინ მაღაზიებს, სილამაზის სალონებს, ფიტნეს სტუდიებს, კლინიკებს, სასტუმროებს, სააგენტოებს — ნებისმიერ მცირე ან საშუალო ბიზნესს, რომელიც ხარჯავს დროს მარკეტინგსა და კომუნიკაციაზე.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>როგორ დავიწყო Beta ტესტირება?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>შეავსეთ <a href="{% url 'beta' %}" style="color:var(--blue);">Beta ფორმა →</a> ამ გვერდზე. ჩვენი გუნდი დაგიკავშირდება 24 საათის განმავლობაში. Beta-ში შესვლა უფასოა, ადგილები შეზღუდულია.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          <span>მონაცემები უსაფრთხოდ იქნება?</span>
+          <div class="faq-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+        </button>
+        <div class="faq-a">
+          <p>დიახ, მონაცემთა უსაფრთხოება ჩვენი პრიორიტეტია. ვიყენებთ HTTPS დაშიფვრას, მონაცემები ინახება დაცულ სერვერებზე და არასდროს გადაეცემა მესამე მხარეს.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="solution-cta reveal" style="margin-top:60px">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <h2>კიდევ გაქვს <span class="text-grad">კითხვა?</span></h2>
+        <p>დაგვიკავშირდი — პასუხს 24 საათში გაძლევთ.</p>
+        <div class="cta-btns">
+          <a href="{% url 'beta' %}" class="btn btn-primary btn-glow">Beta-ში შესვლა →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

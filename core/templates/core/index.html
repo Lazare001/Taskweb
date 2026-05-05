@@ -1,0 +1,285 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block title %}Tasky — AI ციფრული თანამშრომელი ქართული ბიზნესებისთვის{% endblock %}
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg-grid"></div>
+  <div class="hero-orbs">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        ახლა Beta — 20 ადგილი დარჩა
+      </div>
+      <h1 class="reveal">
+        შენი ბიზნესის<br>
+        <span class="hero-grad">ციფრული თანამშრომელი</span>
+      </h1>
+      <p class="hero-slogan reveal">მიეცი დავალება ტასკის და დაზოგე დრო.</p>
+      <p class="hero-sub reveal">AI ასისტენტი ქართული მცირე და საშუალო ბიზნესებისთვის — მარკეტინგი, გაყიდვები, ხარჯების კონტროლი და ანალიტიკა ერთ პლატფორმაზე.</p>
+      <div class="hero-btns reveal">
+        <a href="{% url 'beta' %}" class="btn btn-primary btn-glow">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          დაიწყე Beta ტესტირება
+        </a>
+        <a href="{% url 'solution' %}" class="btn btn-glass">
+          ნახე როგორ მუშაობს
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div class="hero-trust reveal">
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          ქართული ბაზარი
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          24/7 ავტომატიზაცია
+        </div>
+        <div class="trust-item">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          ტექნიკური ცოდნა არ სჭირდება
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual reveal">
+      <div class="dash-wrap">
+        <div class="dash-glow"></div>
+        <div class="dash">
+          <div class="dash-header">
+            <div class="dash-dots"><span></span><span></span><span></span></div>
+            <div class="dash-title-bar">
+              <img src="{% static 'core/images/logo.svg' %}" alt="" style="width:16px;height:16px">
+              Tasky Dashboard
+            </div>
+            <div class="dash-status"><span class="status-dot"></span>Live</div>
+          </div>
+          <div class="dash-body">
+            <div class="dash-metric-row">
+              <div class="dash-metric">
+                <div class="dm-label">გაყიდვები</div>
+                <div class="dm-value" data-target="48200">0</div>
+                <div class="dm-delta up">+12.4%</div>
+              </div>
+              <div class="dash-metric">
+                <div class="dm-label">ROI</div>
+                <div class="dm-value" data-target="284" data-suffix="%">0%</div>
+                <div class="dm-delta up">+34.1%</div>
+              </div>
+              <div class="dash-metric">
+                <div class="dm-label">ფუჭი ხარჯი</div>
+                <div class="dm-value" data-target="27" data-suffix="%" data-prefix="-">0%</div>
+                <div class="dm-delta down">-27%</div>
+              </div>
+            </div>
+            <div class="dash-chart-area">
+              <div class="chart-label">შემოსავალი — ბოლო 7 დღე</div>
+              <div class="chart-bars">
+                <div class="cb"><div class="cb-fill" style="--h:45%"></div><span>ორშ</span></div>
+                <div class="cb"><div class="cb-fill" style="--h:62%"></div><span>სამ</span></div>
+                <div class="cb"><div class="cb-fill" style="--h:38%"></div><span>ოთხ</span></div>
+                <div class="cb"><div class="cb-fill" style="--h:78%"></div><span>ხუთ</span></div>
+                <div class="cb"><div class="cb-fill" style="--h:55%"></div><span>პარ</span></div>
+                <div class="cb"><div class="cb-fill highlight" style="--h:92%"></div><span>შაბ</span></div>
+                <div class="cb"><div class="cb-fill" style="--h:70%"></div><span>კვი</span></div>
+              </div>
+            </div>
+            <div class="dash-tasks">
+              <div class="task-item done">
+                <div class="task-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                Facebook პოსტი გამოქვეყნდა
+              </div>
+              <div class="task-item done">
+                <div class="task-icon">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                </div>
+                12 შეტყობინებაზე პასუხი გაიგზავნა
+              </div>
+              <div class="task-item running">
+                <div class="task-icon pulse-dot"></div>
+                ყოველთვიური ანგარიში მზადდება...
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- QUICK STATS -->
+<section class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num">-27%</div>
+        <div class="stat-label">ფუჭი სარეკლამო ხარჯი</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">4x</div>
+        <div class="stat-label">უფრო სწრაფი პასუხი</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">+35%</div>
+        <div class="stat-label">მეტი ჯავშანი და შეკვეთა</div>
+      </div>
+      <div class="stat-item reveal">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">ავტომატური მუშაობა</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IS IT FOR -->
+<section class="section usecases">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">ვის შეეფერება</div>
+      <h2>ნებისმიერი ბიზნესისთვის,<br>რომელსაც <span class="text-grad">დრო ძვირი ღირს</span></h2>
+    </div>
+    <div class="uc-grid">
+      <a href="{% url 'solution' %}" class="uc-card reveal">
+        <div class="uc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><path d="M6 1v3M10 1v3M14 1v3"/></svg>
+        </div>
+        <h4>კაფე / რესტორანი</h4>
+        <p>მენიუს პრომო, მომხმარებელთა პასუხები, ხარჯების კონტროლი</p>
+        <div class="uc-arrow">→</div>
+      </a>
+      <a href="{% url 'solution' %}" class="uc-card reveal">
+        <div class="uc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        </div>
+        <h4>ონლაინ მაღაზია</h4>
+        <p>პროდუქტის აღწერები, ჩატბოტი, კამპანიის ოპტიმიზაცია</p>
+        <div class="uc-arrow">→</div>
+      </a>
+      <a href="{% url 'solution' %}" class="uc-card reveal">
+        <div class="uc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <h4>სილამაზის სალონი</h4>
+        <p>ჯავშნის მართვა, პრომო პოსტები, კლიენტებთან კომუნიკაცია</p>
+        <div class="uc-arrow">→</div>
+      </a>
+      <a href="{% url 'solution' %}" class="uc-card reveal">
+        <div class="uc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h4>ფიტნეს სტუდია</h4>
+        <p>აქციები, წევრობის მართვა, სოციალური მედიის კონტენტი</p>
+        <div class="uc-arrow">→</div>
+      </a>
+      <a href="{% url 'solution' %}" class="uc-card reveal">
+        <div class="uc-icon-wrap">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4>კლინიკა</h4>
+        <p>ჩაწერების მართვა, შეხსენებები, პაციენტებთან კომუნიკაცია</p>
+        <div class="uc-arrow">→</div>
+      </a>
+      <a href="{% url 'beta' %}" class="uc-card uc-cta reveal">
+        <div class="uc-cta-inner">
+          <h4>შენი ბიზნესი?</h4>
+          <p>ნებისმიერ სფეროში Tasky ეხმარება ავტომატიზაციაში.</p>
+          <div class="btn btn-primary" style="margin-top:20px;display:inline-flex">Beta-ში შესვლა →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS TEASER -->
+<section class="section how-teaser">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-tag">პროცესი</div>
+      <h2>4 ნაბიჯი სრულ<br><span class="text-grad">ავტომატიზაციამდე</span></h2>
+    </div>
+    <div class="steps-row">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <h4>აკავშირებ</h4>
+        <p>დააკავშირე Facebook, Instagram და ბიზნეს მონაცემები.</p>
+      </div>
+      <div class="step-arrow reveal">→</div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <h4>აძლევ დავალებას</h4>
+        <p>ერთი დაჭერით ირჩევ რა გინდა — პოსტი, ანგარიში, ანალიზი.</p>
+      </div>
+      <div class="step-arrow reveal">→</div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <h4>Tasky ასრულებს</h4>
+        <p>AI ქმნის, პასუხობს, ითვლის და აანალიზებს ავტომატურად.</p>
+      </div>
+      <div class="step-arrow reveal">→</div>
+      <div class="step-card reveal">
+        <div class="step-num">04</div>
+        <h4>შედეგი Dashboard-ში</h4>
+        <p>ყველაფერი ჩანს ერთ სუფთა Dashboard-ში.</p>
+      </div>
+    </div>
+    <div class="tc reveal" style="margin-top:40px">
+      <a href="{% url 'solution' %}" class="btn btn-glass">სრული პროდუქტი →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section final-cta">
+  <div class="container">
+    <div class="cta-box reveal">
+      <div class="cta-glow"></div>
+      <div class="section-tag">Beta — შეზღუდული ადგილები</div>
+      <h2>დაზოგე დრო. შეამცირე ფუჭი ხარჯი.<br><span class="text-grad">გაზარდე გაყიდვები.</span></h2>
+      <div class="cta-btns">
+        <a href="{% url 'beta' %}" class="btn btn-primary btn-glow btn-xl">დაიწყე Beta ტესტირება</a>
+        <a href="{% url 'pricing' %}" class="btn btn-glass btn-xl">იხილე ფასები</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// Dashboard number animation
+const dashObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.querySelectorAll('[data-target]').forEach(el => {
+        const target = parseInt(el.dataset.target);
+        const suffix = el.dataset.suffix || '';
+        const prefix = el.dataset.prefix || '';
+        let current = 0;
+        const step = Math.ceil(target / 50);
+        const t = setInterval(() => {
+          current = Math.min(current + step, target);
+          el.textContent = prefix + (target >= 1000 ? current.toLocaleString('en') : current) + suffix;
+          if (current >= target) clearInterval(t);
+        }, 30);
+      });
+      e.target.querySelectorAll('.cb-fill').forEach(b => b.classList.add('animated'));
+      dashObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.3 });
+const dash = document.querySelector('.dash');
+if (dash) dashObserver.observe(dash);
+</script>
+{% endblock %}

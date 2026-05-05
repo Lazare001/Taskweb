@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% block title %}Beta — Tasky AI{% endblock %}
+{% block content %}
+<section class="inner-hero">
+  <div class="hero-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+  <div class="container">
+    <div class="inner-hero-content reveal">
+      <div class="section-tag">შეზღუდული ადგილები</div>
+      <h1>შემოგვიერთდი <span class="hero-grad">Beta-ში</span></h1>
+      <p>ვარჩევთ 20–30 ქართულ ბიზნესს. ადრეული წვდომა, სპეციალური პირობები.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="beta-layout">
+      <div class="beta-left reveal">
+        <h2>Beta პროგრამის <span class="text-grad">სარგებელი</span></h2>
+        <div class="benefit-list">
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div>
+              <h4>Early Access</h4>
+              <p>გამოიყენე Tasky სხვებზე ადრე და განაპირობე პროდუქტის განვითარება.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <div>
+              <h4>პერსონალიზებული Setup</h4>
+              <p>ჩვენი გუნდი პირადად დაგეხმარება სეტაპსა და პლატფორმის ათვისებაში.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+            </div>
+            <div>
+              <h4>50% ფასდაკლება — 3 თვე</h4>
+              <p>Beta მონაწილეები პირველ 3 თვეს ნახევარ ფასად იყენებენ პლატფორმას.</p>
+            </div>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <div>
+              <h4>პირდაპირი გავლენა პროდუქტზე</h4>
+              <p>შენი ფიდბექი პირდაპირ აყალიბებს Tasky-ს განვითარების გზას.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="partners-mini">
+          <p class="partners-label">პარტნიორები</p>
+          <div class="partner-tags">
+            <span class="ptag">ქართული ბანკები</span>
+            <span class="ptag">ბიზნეს ჰაბები</span>
+            <span class="ptag">SME აქსელერატორები</span>
+            <span class="ptag">SME ასოციაციები</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="beta-right reveal">
+        <div class="beta-form-card">
+          <div class="beta-form-card-glow"></div>
+          <h3>Beta-ში რეგისტრაცია</h3>
+          <p class="form-sub">შეავსე ფორმა — 24 საათში დაგიკავშირდებით.</p>
+          <form id="beta-form">
+            <div class="fg">
+              <label for="f-name">სახელი *</label>
+              <input type="text" id="f-name" placeholder="თქვენი სახელი" required>
+            </div>
+            <div class="fg">
+              <label for="f-biz">ბიზნესის სახელი *</label>
+              <input type="text" id="f-biz" placeholder="შპს / IP / ბრენდის სახელი" required>
+            </div>
+            <div class="fg">
+              <label for="f-contact">ტელეფონი ან Email *</label>
+              <input type="text" id="f-contact" placeholder="+995 5xx xx xx xx ან name@gmail.com" required>
+            </div>
+            <div class="fg">
+              <label for="f-type">ბიზნესის ტიპი *</label>
+              <select id="f-type" required>
+                <option value="">-- აირჩიეთ --</option>
+                <option>კაფე / რესტორანი</option>
+                <option>ონლაინ მაღაზია</option>
+                <option>სილამაზის სალონი</option>
+                <option>ფიტნეს სტუდია</option>
+                <option>კლინიკა</option>
+                <option>სააგენტო</option>
+                <option>საცალო ვაჭრობა</option>
+                <option>სხვა</option>
+              </select>
+            </div>
+            <div class="fg">
+              <label for="f-msg">შეტყობინება <span class="optional">(სურვილისამებრ)</span></label>
+              <textarea id="f-msg" rows="3" placeholder="მოგვიყევით ბიზნესის შესახებ, ან რა გამოწვევა გაქვთ..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-glow w100 btn-lg" id="beta-btn">
+              <span class="btn-text">Beta-ში შესვლა</span>
+              <span class="loader hidden"></span>
+            </button>
+          </form>
+          <div id="form-success" class="form-msg hidden">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+            მადლობა! მოთხოვნა მიღებულია. 24 საათში დაგიკავშირდებით.
+          </div>
+          <div id="form-error" class="form-msg form-msg-err hidden"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

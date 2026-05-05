@@ -1,0 +1,121 @@
+{% extends 'core/base.html' %}
+{% block title %}ფასები — Tasky AI{% endblock %}
+{% block content %}
+<section class="inner-hero">
+  <div class="hero-orbs"><div class="orb orb1"></div><div class="orb orb2"></div></div>
+  <div class="container">
+    <div class="inner-hero-content reveal">
+      <div class="section-tag">ფასები</div>
+      <h1>გამჭვირვალე <span class="hero-grad">გეგმები</span></h1>
+      <p>Beta მონაწილეები იღებენ სპეციალურ ფასდაკლებას პირველ 3 თვეზე.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="price-grid">
+      <div class="price-card reveal">
+        <div class="price-badge-wrap"><span class="price-tier-label">Regular</span></div>
+        <div class="price-main">
+          <span class="price-currency">$</span>
+          <span class="price-num">18</span>
+          <span class="price-cents">.99</span>
+        </div>
+        <div class="price-period">/ თვეში</div>
+        <p class="price-desc">მცირე ბიზნესებისთვის, რომლებიც ავტომატიზაციას იწყებენ.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ბაზისური AI კონტენტი</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ბაზისური გაყიდვების პასუხები</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>მარტივი ხარჯების მიმოხილვა</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ყოველთვიური ანგარიში</li>
+          <li class="muted"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>AI ჩატბოტი</li>
+          <li class="muted"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>ROI Dashboard</li>
+        </ul>
+        <a href="{% url 'beta' %}" class="btn btn-outline w100">Regular-ით დაწყება</a>
+      </div>
+
+      <div class="price-card popular reveal">
+        <div class="popular-glow"></div>
+        <div class="price-badge-wrap">
+          <span class="price-tier-label">Pro</span>
+          <span class="popular-pill">ყველაზე პოპულარული</span>
+        </div>
+        <div class="price-main">
+          <span class="price-currency">$</span>
+          <span class="price-num">39</span>
+          <span class="price-cents">.99</span>
+        </div>
+        <div class="price-period">/ თვეში</div>
+        <p class="price-desc">მზარდი ბიზნესებისთვის, სრული ავტომატიზაციისთვის.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>სრული მარკეტინგის ასისტენტი</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ქართული AI ჩატბოტი</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ROI Dashboard</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>ყოველკვირეული ანგარიშები</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>კამპანიის რეკომენდაციები</li>
+          <li class="muted"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#334155" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>Custom Workflow</li>
+        </ul>
+        <a href="{% url 'beta' %}" class="btn btn-primary btn-glow w100">Pro-ით დაწყება</a>
+      </div>
+
+      <div class="price-card reveal">
+        <div class="price-badge-wrap"><span class="price-tier-label">Pro Max</span></div>
+        <div class="price-main">
+          <span class="price-currency">$</span>
+          <span class="price-num">99</span>
+          <span class="price-cents">.99</span>
+        </div>
+        <div class="price-period">/ თვეში</div>
+        <p class="price-desc">სრული ავტომატიზაცია და პრიორიტეტული მხარდაჭერა.</p>
+        <div class="price-divider"></div>
+        <ul class="price-features">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>მოწინავე მარკეტინგის ავტომატიზაცია</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>მოწინავე გაყიდვების აგენტი</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>სრული ხარჯებისა და ROI ანალიტიკა</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>პრიორიტეტული მხარდაჭერა</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Custom Workflow Setup</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>მოწინავე ბიზნეს რეკომენდაციები</li>
+        </ul>
+        <a href="{% url 'beta' %}" class="btn btn-outline w100">Pro Max-ით დაწყება</a>
+      </div>
+    </div>
+
+    <div class="price-note reveal">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      Beta მონაწილეები იღებენ <strong>50% ფასდაკლებას</strong> პირველ 3 თვეზე.
+    </div>
+
+    <!-- CASE STUDIES -->
+    <div class="cases-section">
+      <div class="section-header reveal" style="margin-top:80px">
+        <div class="section-tag">Beta შედეგები</div>
+        <h2>რეალური <span class="text-grad">შედეგები</span></h2>
+        <p class="section-sub">მაგალითები Beta ტესტირების პერიოდიდან. შედეგები შეიძლება განსხვავდებოდეს.</p>
+      </div>
+      <div class="case-grid">
+        <div class="case-card reveal">
+          <div class="case-num">-27%</div>
+          <h4>კაფე, თბილისი</h4>
+          <p>Tasky-ს ხარჯების ანალიზით კაფემ შეამცირა ფუჭი სარეკლამო ხარჯი 27%-ით პირველ თვეში.</p>
+          <div class="case-tag">Beta მაგალითი</div>
+        </div>
+        <div class="case-card reveal">
+          <div class="case-num">4x</div>
+          <h4>ონლაინ მაღაზია</h4>
+          <p>AI ჩატბოტით შეტყობინებებზე პასუხის სიჩქარე გაიზარდა 4-ჯერ — ყოველი კლიენტი პასუხს იღებს.</p>
+          <div class="case-tag">Beta მაგალითი</div>
+        </div>
+        <div class="case-card reveal">
+          <div class="case-num">+35%</div>
+          <h4>სილამაზის სალონი</h4>
+          <p>ავტომატური პასუხებითა და პრომო კონტენტით სალონმა მიიღო 35%-ით მეტი ჯავშანი.</p>
+          <div class="case-tag">Beta მაგალითი</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
