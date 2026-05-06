@@ -140,7 +140,7 @@ def beta_signup(request):
                 subject=subject,
                 message=body,
                 from_email=settings.EMAIL_HOST_USER,
-                recipient_list=['Lazarechachua20@gmail.com'],
+                recipient_list=[settings.EMAIL_HOST_USER],
                 fail_silently=True,
                 html_message=html_message
             )
