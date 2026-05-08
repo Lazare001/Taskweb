@@ -164,3 +164,16 @@ ul{list-style:none}
 .footer-bottom{text-align:center;padding:20px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 .footer-bottom p{color:var(--text3);font-size:.78rem}
 @media(max-width:700px){.footer-top{grid-template-columns:1fr;text-align:center}.footer-cta-box{text-align:center}.footer-bottom{justify-content:center}}
+.feature-card {
+    /* Added border-color to the transition, and used a super smooth cubic-bezier curve */
+    transition: transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1), 
+                box-shadow 0.5s cubic-bezier(0.165, 0.84, 0.44, 1),
+                border-color 0.4s ease;
+    will-change: transform, box-shadow; /* Helps the browser render it smoothly */
+}
+
+.feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.12) !important;
+    border-color: rgba(59, 130, 246, 0.5) !important;
+}

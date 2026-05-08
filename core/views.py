@@ -5,8 +5,8 @@ from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import BetaSignup
-
+from .models import BetaSignup, Post
+from django.core.paginator import Paginator
 
 def index(request):
     return render(request, 'core/index.html')
@@ -152,3 +152,15 @@ def beta_signup(request):
         return JsonResponse({'status': 'error', 'message': 'არასწორი მონაცემები.'}, status=400)
     except Exception:
         return JsonResponse({'status': 'error', 'message': 'სერვერის შეცდომა. სცადეთ მოგვიანებით.'}, status=500)
+
+
+
+def posts(request):
+
+    all_posts = Post.objects.all()
+    paginator = Paginator(all_posts, 6) 
+    
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+    
+    return render(request, 'core/posts.html', {'page_obj': page_obj})

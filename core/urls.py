@@ -9,5 +9,7 @@ urlpatterns = [
     path('pricing/', views.pricing, name='pricing'),
     path('faq/', views.faq, name='faq'),
     path('beta/', views.beta, name='beta'),
+    path('posts/', views.posts, name='posts'),
     path('api/beta-signup/', views.beta_signup, name='beta_signup'),
 ]
+

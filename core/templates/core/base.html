@@ -20,7 +20,7 @@
 <div class="nav-island-wrap">
   <nav class="nav-island" id="nav-island">
     <a href="{% url 'index' %}" class="nav-logo" aria-label="Tasky Home">
-      <img src="{% static 'core/images/logo.svg' %}" alt="Tasky Logo" class="logo-img">
+      <img src="{% static 'core/images/logo.jpg' %}" alt="Tasky Logo" class="logo-img">
       <span class="logo-text">Tasky<span class="logo-ai">AI</span></span>
     </a>
     <div class="nav-links" id="nav-links">
@@ -29,6 +29,7 @@
       <a href="{% url 'features' %}" class="nav-link {% if request.resolver_match.url_name == 'features' %}active{% endif %}">ფუნქციები</a>
       <a href="{% url 'pricing' %}" class="nav-link {% if request.resolver_match.url_name == 'pricing' %}active{% endif %}">ფასები</a>
       <a href="{% url 'faq' %}" class="nav-link {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">FAQ</a>
+      <a href="{% url 'posts' %}" class="nav-link {% if request.resolver_match.url_name == 'posts' %}active{% endif %}">სიახლეები</a>
     </div>
     <a href="{% url 'beta' %}" class="btn-island {% if request.resolver_match.url_name == 'beta' %}active{% endif %}">Beta →</a>
     <button class="burger" id="burger" aria-label="მენიუ">
@@ -47,6 +48,7 @@
     <a href="{% url 'index' %}" class="mobile-link">მთავარი</a>
     <a href="{% url 'problem' %}" class="mobile-link">პრობლემა</a>
     <a href="{% url 'solution' %}" class="mobile-link">გადაწყვეტა</a>
+    <a href="{% url 'posts' %}" class="mobile-link">სიახლეები</a>
     <a href="{% url 'features' %}" class="mobile-link">ფუნქციები</a>
     <a href="{% url 'pricing' %}" class="mobile-link">ფასები</a>
     <a href="{% url 'faq' %}" class="mobile-link">FAQ</a>
